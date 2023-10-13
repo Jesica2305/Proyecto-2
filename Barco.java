@@ -3,10 +3,18 @@ import java.util.Random;
 public class Barco {
     private Tablero tablero;
 
+    /**
+      * Constructor donde Barco recibe como parametro Tablero y como variable tablero para que la clase Barco acceda al tablero donde se ubicaran los barcos
+      * Complejidad Temporal: O(1) Tiempo constante
+      */
     public Barco(Tablero tablero) {
         this.tablero = tablero;
     }
 
+    /**
+      * Método el cual llama a los cuatro métodos de colocación de barcos
+      * Complejidad Temporal: O(1) Tiempo constante
+      */
     public void colocarBarcos() {
         colocarBarco1();
         colocarBarco2();
@@ -14,6 +22,10 @@ public class Barco {
         colocarBarco4();
     }
 
+    /**
+      * Método que ubica de forma aleatoria los barcos 'D' y 'E' donde cada uno ocupa una casilla 
+      * Complejidad Temporal: O(1) Tiempo constante
+      */
     private void colocarBarco1() {
         Random random = new Random();
         int TAMANO = tablero.getTAMANO();
@@ -31,6 +43,10 @@ public class Barco {
         }
     }
 
+    /**
+      * Método el cual ubica aleatoriamente los barcos 'A' y 'B' donde cada uno ocupa dos casillas verticalmente
+      * Complejidad Temporal: O(1) Tiempo constante 
+      */
     private void colocarBarco2() {
         Random random = new Random();
         int TAMANO = tablero.getTAMANO();
@@ -49,6 +65,10 @@ public class Barco {
         }
     }
 
+    /**
+      * Método el cual ubica aleatoriamente el barco 'C' el cual ocupa tres casillas horizontalmente
+      * Complejidad Temporal: O(1) Tiempo constante
+      */
     private void colocarBarco3() {
         Random random = new Random();
         int TAMANO = tablero.getTAMANO();
@@ -66,6 +86,10 @@ public class Barco {
         tablero.getMatriz()[fila][columna + 2] = barco;
     }
 
+    /**
+      * Método que ubica aleatoriamente el barco 'F' que ocupa cuatro casillas horizontalmente
+      * Tiempo constante: O(1) Tiempo constante
+      */
     private void colocarBarco4() {
         Random random = new Random();
         int TAMANO = tablero.getTAMANO();
