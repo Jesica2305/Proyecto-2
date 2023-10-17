@@ -17,7 +17,7 @@ public class Principal {
 
         /*
         se crea el siguiente bucle para que el juego continue si los barcos restantes son mayores a 0.
-        complejidad temporal: O(N) Tiempo cuadratico.
+        complejidad temporal: O(N) Tiempo Lineal.
         */
         while (barcosRestantes > 0) {
             System.out.print("Ingrese una coordenada (fila columna): ");
